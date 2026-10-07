@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+
+<html lang="pt"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface-variant": "#5a413b", "on-secondary-fixed-variant": "#005233", "secondary-fixed": "#86f9bc", "outline": "#8e7069", "inverse-on-surface": "#f3f0ef", "primary": "#ae2a04", "surface-tint": "#b22c07", "tertiary": "#7a5500", "surface-variant": "#e5e2e1", "surface-bright": "#fcf9f8", "surface": "#fcf9f8", "surface-container": "#f0eded", "on-surface": "#1c1b1b", "on-secondary-fixed": "#002112", "surface-dim": "#dcd9d9", "surface-container-high": "#eae7e7", "surface-container-lowest": "#ffffff", "secondary": "#006c45", "on-secondary-container": "#00734a", "on-tertiary-fixed": "#271900", "primary-container": "#d1421e", "on-tertiary-container": "#fffbff", "on-background": "#1c1b1b", "tertiary-container": "#9a6c00", "inverse-surface": "#313030", "on-primary-container": "#fffbff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "inverse-primary": "#ffb4a2", "primary-fixed-dim": "#ffb4a2", "error-container": "#ffdad6", "on-primary-fixed-variant": "#8a1d00", "surface-container-low": "#f6f3f2", "on-tertiary-fixed-variant": "#5f4100", "error": "#ba1a1a", "on-error": "#ffffff", "on-primary-fixed": "#3c0700", "tertiary-fixed": "#ffdeaa", "background": "#fcf9f8", "tertiary-fixed-dim": "#feba31", "secondary-container": "#86f9bc", "outline-variant": "#e2bfb6", "primary-fixed": "#ffdad2", "surface-container-highest": "#e5e2e1", "secondary-fixed-dim": "#69dca1", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "0.75rem", "margin": "1.25rem", "space-lg": "1rem", "space-xl": "1.5rem", "space-sm": "0.5rem", "space-md": "0.75rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-xl": [ "Inter" ], "body-default": [ "Inter" ], "body-medium": [ "Inter" ], "tabular-metric": [ "Inter" ], "caption": [ "Inter" ], "headline-md": [ "Inter" ], "headline-lg": [ "Inter" ], "label-compact": [ "Inter" ], "metric-display": [ "Inter" ] }, "fontSize": { "headline-xl": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-default": [ "13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "body-medium": [ "13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "500" } ], "tabular-metric": [ "13px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "caption": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-md": [ "15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "label-compact": [ "12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" } ], "metric-display": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.025em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-default text-body-default text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-60 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="p-space-md pb-space-sm"><div class="flex items-center justify-between mb-space-sm"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded bg-primary flex items-center justify-center text-on-primary font-headline-md font-semibold text-[13px] tracking-tight shadow-sm">A</div><span class="font-headline-md text-headline-md text-on-surface">Atlas CRM</span></div><div class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-caption text-caption cursor-pointer hover:bg-surface-container-high transition-colors"><span>AtlasCorp</span><span class="material-symbols-outlined text-[14px]">unfold_more</span></div></div><div class="relative flex items-center mt-space-xs"><span class="material-symbols-outlined absolute left-2 text-[16px] text-on-surface-variant pointer-events-none">search</span><input class="w-full h-8 pl-7 pr-8 bg-surface-container-low rounded font-body-default text-body-default text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Procurar..." type="text"/><span class="absolute right-2 px-1 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-caption text-[10px] pointer-events-none">⌘K</span></div></div><nav class="flex flex-col gap-0.5 px-space-xs pt-space-xs overflow-y-auto max-h-[calc(100vh-220px)]" data-active-classes="bg-primary-fixed text-on-primary-fixed font-body-medium"><a aria-current="page" class="flex items-center justify-between px-space-sm py-1.5 rounded transition-colors bg-primary-fixed text-on-primary-fixed font-body-medium" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-default text-body-default">Dashboard</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pipeline" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">view_kanban</span><span class="font-body-default text-body-default">Pipeline</span></div><span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-caption text-caption">24</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="leads" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-default text-body-default">Leads</span></div><span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-caption text-caption">43</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="clientes" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">storefront</span><span class="font-body-default text-body-default">Clientes</span></div><span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-caption text-caption">18</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="propostas" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">description</span><span class="font-body-default text-body-default">Propostas</span></div><span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-caption text-caption">7</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tarefas" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">check_box</span><span class="font-body-default text-body-default">Tarefas</span></div><span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-caption text-caption">5</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="atividades" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">schedule</span><span class="font-body-default text-body-default">Atividades</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="mensagens" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">chat_bubble</span><span class="font-body-default text-body-default">Mensagens</span></div><span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-caption text-caption">12</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="servicos" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">design_services</span><span class="font-body-default text-body-default">Serviços</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="relatorios" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-body-default text-body-default">Relatórios</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracoes" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-body-default text-body-default">Configurações</span></div></a></nav></div><div class="p-space-sm bg-surface-container-low/60 m-space-xs rounded flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="font-body-medium text-[11px] text-on-primary font-semibold">AC</span></div><div class="min-w-0"><p class="font-body-medium text-body-medium text-on-surface truncate">Atlas Consultor</p><p class="font-caption text-caption text-on-surface-variant truncate">Prospecção &amp; Vendas</p></div></div><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" title="Opções"><span class="material-symbols-outlined text-[18px]">more_vert</span></button></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-12 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin"><div class="flex items-center gap-space-md"><span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider font-semibold">Setor Luanda • Pastelarias &amp; Confeitarias</span><div class="h-3.5 w-px bg-surface-container-high"></div><span class="font-caption text-caption text-secondary font-medium">Mercado AO: Kwanza (Kz)</span></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-1.5 h-8 px-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface text-label-compact font-label-compact transition-colors"><span class="material-symbols-outlined text-[16px]">tune</span><span>Filtros Rápidos</span></button><button class="flex items-center gap-1.5 h-8 px-space-sm rounded bg-primary text-on-primary text-label-compact font-label-compact hover:bg-primary-container transition-colors shadow-sm"><span class="material-symbols-outlined text-[16px]">add</span><span>Nova Prospecção</span></button><div class="h-4 w-px bg-surface-container-high mx-space-xs"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-12 w-full px-margin"><div class="flex flex-col w-full pb-12 gap-y-4">
+<!-- PAGE HEADER & ACTION TOOLBAR -->
+<header class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 pt-3 pb-1">
+<div>
+<div class="flex items-center gap-2">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Bom dia, Atlas 👋</h1>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container/50 text-on-secondary-fixed font-caption text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          Luanda Ativa
+        </span>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant mt-0.5">Aqui está o que precisa da tua atenção hoje no setor de confeitaria e pastelaria.</p>
+</div>
+<!-- Right utility controls -->
+<div class="flex items-center gap-2">
+<!-- Search input -->
+<div class="relative flex items-center min-w-[280px]">
+<span class="material-symbols-outlined absolute left-2.5 text-[17px] text-outline pointer-events-none">search</span>
+<input class="w-full h-8 pl-8 pr-10 bg-surface-container-lowest rounded-lg font-body-default text-body-default text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest shadow-sm transition-all" placeholder="Procurar pastelaria, lead ou proposta..." type="text"/>
+<kbd class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-caption text-[10px] uppercase font-medium pointer-events-none">⌘F</kbd>
+</div>
+<!-- Notifications -->
+<button class="relative h-8 w-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors shadow-sm" title="Notificações">
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+<span class="absolute 1 top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</button>
+<!-- Profile mini avatar -->
+<div class="h-8 w-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface font-body-medium text-caption font-semibold cursor-pointer shadow-sm">
+        AO
+      </div>
+<!-- Primary Action CTA -->
+<button class="flex items-center gap-1.5 h-8 px-3 rounded-lg bg-primary text-on-primary font-body-medium text-body-medium hover:bg-primary-container active:scale-[0.98] transition-all shadow-sm">
+<span class="material-symbols-outlined text-[17px]">person_add</span>
+<span>+ Novo Lead</span>
+</button>
+</div>
+</header>
+<!-- 4 COMPACT KPI METRIC CARDS -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+<!-- Card 1: Leads Ativos -->
+<div class="bg-surface-container-lowest rounded-lg p-3.5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-compact text-label-compact text-on-surface-variant">Leads Ativos</span>
+<div class="w-6 h-6 rounded-md bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">groups</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-metric-display text-metric-display text-on-surface tabular-nums">43</span>
+<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-secondary-container/40 text-on-secondary-fixed font-caption text-caption font-medium">
+<span class="material-symbols-outlined text-[12px]">trending_up</span>
+          +8 este mês
+        </span>
+</div>
+<div class="mt-2.5 flex items-center justify-between text-on-surface-variant font-caption text-caption">
+<span>Em prospeção: 28</span>
+<span class="text-secondary font-medium">65% taxa ativa</span>
+</div>
+</div>
+<!-- Card 2: Leads Quentes -->
+<div class="bg-surface-container-lowest rounded-lg p-3.5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-compact text-label-compact text-on-surface-variant">Leads Quentes</span>
+<div class="w-6 h-6 rounded-md bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-metric-display text-metric-display text-on-surface tabular-nums">12</span>
+<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-caption text-caption font-medium">
+<span class="material-symbols-outlined text-[12px]">whatshot</span>
+          +3 esta semana
+        </span>
+</div>
+<div class="mt-2.5 flex items-center justify-between text-on-surface-variant font-caption text-caption">
+<span>Score médio: 86/100</span>
+<span class="text-primary font-medium">Alta probabilidade</span>
+</div>
+</div>
+<!-- Card 3: Propostas Abertas -->
+<div class="bg-surface-container-lowest rounded-lg p-3.5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-compact text-label-compact text-on-surface-variant">Propostas Abertas</span>
+<div class="w-6 h-6 rounded-md bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">request_quote</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-display text-metric-display text-on-surface tabular-nums">7</span>
+<span class="font-caption text-caption text-on-surface-variant tabular-nums">(185.000 Kz)</span>
+</div>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-caption text-caption font-medium">
+          4 em negociação
+        </span>
+</div>
+<div class="mt-2.5 flex items-center justify-between text-on-surface-variant font-caption text-caption">
+<span>Ticket Médio: 26.428 Kz</span>
+<span class="text-on-surface font-medium">D+2 fecho est.</span>
+</div>
+</div>
+<!-- Card 4: Pipeline Ponderado -->
+<div class="bg-surface-container-lowest rounded-lg p-3.5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-compact text-label-compact text-on-surface-variant">Pipeline Ponderado</span>
+<div class="w-6 h-6 rounded-md bg-secondary-container flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[15px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-metric-display text-metric-display text-on-surface tabular-nums">850.000 <span class="text-[13px] font-normal text-on-surface-variant">Kz</span></span>
+<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-secondary-container/40 text-on-secondary-fixed font-caption text-caption font-medium">
+<span class="material-symbols-outlined text-[12px]">trending_up</span>
+          +14% este mês
+        </span>
+</div>
+<div class="mt-2.5 flex items-center justify-between text-on-surface-variant font-caption text-caption">
+<span>Meta Luanda: 1.200.000 Kz</span>
+<span class="text-secondary font-medium">70.8% atingido</span>
+</div>
+</div>
+</section>
+<!-- TWO-COLUMN WORKSPACE: TASKS (60%) & PIPELINE STAGES (40%) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-3">
+<!-- LEFT: 🔥 O que fazer hoje (60% -> 7 cols or 7/12) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-lg p-4 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-1.5">
+<span>🔥</span> O que fazer hoje
+            </h2>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-caption text-caption font-semibold">
+              5 prioritárias
+            </span>
+</div>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+            Ver todas as tarefas <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<!-- Task List -->
+<div class="flex flex-col divide-y-0 gap-1.5 mt-1">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center font-body-medium text-caption font-bold text-on-primary-fixed shrink-0">
+                DR
+              </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-body-medium text-on-surface truncate font-semibold">Doces da Ruth</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-fixed font-caption text-[10px] font-bold">92</span>
+</div>
+<p class="font-body-default text-caption text-on-surface-variant truncate">Follow-up da proposta (Identidade Visual) • <span class="text-on-surface font-medium">Hoje, 10:00</span></p>
+</div>
+</div>
+<button class="h-7 px-2.5 rounded bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-on-surface font-label-compact text-caption font-medium transition-colors shadow-sm shrink-0">
+              Follow-up
+            </button>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-body-medium text-caption font-bold text-on-surface shrink-0">
+                SR
+              </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-body-medium text-on-surface truncate font-semibold">Pastelaria Sabor Real</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-container/60 text-on-secondary-fixed font-caption text-[10px] font-bold">81</span>
+</div>
+<p class="font-body-default text-caption text-on-surface-variant truncate">Enviar primeiro contacto (Redesign Menu &amp; Montra) • <span class="text-on-surface font-medium">Hoje, 11:30</span></p>
+</div>
+</div>
+<button class="h-7 px-2.5 rounded bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-on-surface font-label-compact text-caption font-medium transition-colors shadow-sm shrink-0">
+              Contactar
+            </button>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center font-body-medium text-caption font-bold text-on-tertiary-fixed shrink-0">
+                CJ
+              </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-body-medium text-on-surface truncate font-semibold">Confeitaria Jú</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-caption text-[10px] font-bold">76</span>
+</div>
+<p class="font-body-default text-caption text-on-surface-variant truncate">Responder mensagem no WhatsApp sobre embalagens • <span class="text-on-surface font-medium">Hoje, 13:00</span></p>
+</div>
+</div>
+<button class="h-7 px-2.5 rounded bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-on-surface font-label-compact text-caption font-medium transition-colors shadow-sm shrink-0">
+              Responder
+            </button>
+</div>
+<!-- Item 4 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/40 flex items-center justify-center font-body-medium text-caption font-bold text-on-secondary-fixed shrink-0">
+                BN
+              </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-body-medium text-on-surface truncate font-semibold">Bolos da Nádia</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-fixed font-caption text-[10px] font-bold">88</span>
+</div>
+<p class="font-body-default text-caption text-on-surface-variant truncate">Enviar orçamento de rebranding e cartões • <span class="text-on-surface font-medium">Hoje, 15:00</span></p>
+</div>
+</div>
+<button class="h-7 px-2.5 rounded bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-on-surface font-label-compact text-caption font-medium transition-colors shadow-sm shrink-0">
+              Enviar proposta
+            </button>
+</div>
+<!-- Item 5 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-body-medium text-caption font-bold text-on-surface-variant shrink-0">
+                DM
+              </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-body-medium text-on-surface truncate font-semibold">Doçuras da Maria</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant font-caption text-[10px] font-bold">69</span>
+</div>
+<p class="font-body-default text-caption text-on-surface-variant truncate">Follow-up D+3 após apresentação presencial • <span class="text-on-surface font-medium">Hoje, 16:30</span></p>
+</div>
+</div>
+<button class="h-7 px-2.5 rounded bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-on-surface font-label-compact text-caption font-medium transition-colors shadow-sm shrink-0">
+              Follow-up
+            </button>
+</div>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant font-caption text-caption">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+          2 tarefas já concluídas esta manhã
+        </span>
+<span>Tempo médio de resposta: 24 min</span>
+</div>
+</div>
+<!-- RIGHT: Pipeline de Vendas (40% -> 5 cols or 5/12) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-lg p-4 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-2">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Pipeline</h2>
+<p class="font-caption text-caption text-on-surface-variant">Volume global em curso</p>
+</div>
+<div class="text-right">
+<div class="font-metric-display text-[19px] text-on-surface font-bold tabular-nums">850.000 Kz</div>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors inline-flex items-center gap-0.5" href="#">
+              Ver pipeline <span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Segmented Funnel Progress Bar -->
+<div class="w-full h-2 rounded-full bg-surface-container flex overflow-hidden mt-2 mb-3.5">
+<div class="h-full bg-outline-variant" style="width: 21%;" title="Lead (180.000 Kz)"></div>
+<div class="h-full bg-surface-tint/40" style="width: 16%;" title="Contacto (135.000 Kz)"></div>
+<div class="h-full bg-tertiary-fixed-dim" style="width: 18%;" title="Diagnóstico (150.000 Kz)"></div>
+<div class="h-full bg-primary" style="width: 22%;" title="Proposta (185.000 Kz)"></div>
+<div class="h-full bg-primary-container" style="width: 10%;" title="Follow-up (90.000 Kz)"></div>
+<div class="h-full bg-secondary" style="width: 13%;" title="Clientes (110.000 Kz)"></div>
+</div>
+<!-- Funnel Stages List -->
+<div class="flex flex-col gap-2 font-caption text-caption">
+<!-- Stage 1 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-[90px]">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-body-medium text-on-surface">Lead</span>
+</div>
+<span class="text-on-surface-variant">18 negócios</span>
+<span class="font-tabular-metric font-medium text-on-surface tabular-nums">180.000 Kz</span>
+</div>
+<!-- Stage 2 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-[90px]">
+<span class="w-2 h-2 rounded-full bg-surface-tint/40"></span>
+<span class="font-body-medium text-on-surface">Contacto</span>
+</div>
+<span class="text-on-surface-variant">9 negócios</span>
+<span class="font-tabular-metric font-medium text-on-surface tabular-nums">135.000 Kz</span>
+</div>
+<!-- Stage 3 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-[90px]">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-body-medium text-on-surface">Diagnóstico</span>
+</div>
+<span class="text-on-surface-variant">6 negócios</span>
+<span class="font-tabular-metric font-medium text-on-surface tabular-nums">150.000 Kz</span>
+</div>
+<!-- Stage 4 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-[90px]">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-medium text-on-surface font-semibold">Proposta</span>
+</div>
+<span class="text-primary font-medium">7 negócios</span>
+<span class="font-tabular-metric font-semibold text-primary tabular-nums">185.000 Kz</span>
+</div>
+<!-- Stage 5 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-[90px]">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-body-medium text-on-surface">Follow-up</span>
+</div>
+<span class="text-on-surface-variant">3 negócios</span>
+<span class="font-tabular-metric font-medium text-on-surface tabular-nums">90.000 Kz</span>
+</div>
+<!-- Stage 6 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-[90px]">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-medium text-on-surface">Clientes</span>
+</div>
+<span class="text-secondary font-medium">5 ganhos</span>
+<span class="font-tabular-metric font-medium text-on-surface tabular-nums">110.000 Kz</span>
+</div>
+</div>
+</div>
+<!-- Bottom conversion rate badge -->
+<div class="mt-3 pt-2.5 bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">pie_chart</span>
+<span class="font-body-default text-caption text-on-surface-variant">Eficiência Comercial:</span>
+</div>
+<span class="font-body-medium text-caption text-secondary font-bold">21.4% taxa de fecho em Luanda</span>
+</div>
+</div>
+</section>
+<!-- TABLE 1: ATIVIDADE RECENTE (Card largo com borda fina) -->
+<section class="bg-surface-container-lowest rounded-lg p-4 shadow-sm">
+<!-- Toolbar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-3">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">Atividade Recente</h2>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-caption text-caption">Últimas 24h</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="relative">
+<input class="h-7 pl-6 pr-2 bg-surface-container-low rounded font-body-default text-caption text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container transition-colors" placeholder="Filtrar atividade..." type="text"/>
+<span class="material-symbols-outlined absolute left-1.5 top-1.5 text-[14px] text-outline pointer-events-none">filter_list</span>
+</div>
+<button class="h-7 px-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-compact text-caption transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+          Filtrar
+        </button>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors flex items-center gap-0.5 ml-1" href="#">
+          Ver todas <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Dense Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-default text-body-default">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-caption text-caption uppercase tracking-wider">
+<th class="py-2 px-3 font-semibold rounded-l-md">Lead / Negócio</th>
+<th class="py-2 px-3 font-semibold">Atividade</th>
+<th class="py-2 px-3 font-semibold">Resultado</th>
+<th class="py-2 px-3 font-semibold">Data &amp; Hora</th>
+<th class="py-2 px-3 font-semibold rounded-r-md">Próxima Ação</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-[12.5px]">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-medium text-on-surface font-semibold">Doces da Ruth</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">video_camera_front</span>
+              Reunião no Zoom / Presencial
+            </td>
+<td class="py-2.5 px-3 text-on-surface-variant">
+              Proposta de <span class="text-on-surface font-medium tabular-nums">180.000 Kz</span> analisada com interesse
+            </td>
+<td class="py-2.5 px-3 font-tabular-metric text-on-surface-variant">Hoje, 09:15</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-caption text-caption font-medium">
+                Enviar contrato preliminar
+              </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-body-medium text-on-surface font-semibold">Espaço Doce</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">call</span>
+              Chamada telefónica
+            </td>
+<td class="py-2.5 px-3 text-on-surface-variant">
+              Pediu portfólio de embalagens de bolos
+            </td>
+<td class="py-2.5 px-3 font-tabular-metric text-on-surface-variant">Hoje, 08:40</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-caption text-caption font-medium">
+                Agendar diagnóstico
+              </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-body-medium text-on-surface font-semibold">Sabores da Vau</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">send</span>
+              Envio de DM Instagram
+            </td>
+<td class="py-2.5 px-3 text-on-surface-variant">
+              Resposta positiva solicitando preçário
+            </td>
+<td class="py-2.5 px-3 font-tabular-metric text-on-surface-variant">Ontem, 17:20</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-caption text-caption font-medium">
+                Primeiro contacto por WhatsApp
+              </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-body-medium text-on-surface font-semibold">Delícias da Ana</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">store</span>
+              Visita técnica ao espaço
+            </td>
+<td class="py-2.5 px-3 text-on-surface-variant">
+              Levantamento de necessidades de sinalética
+            </td>
+<td class="py-2.5 px-3 font-tabular-metric text-on-surface-variant">Ontem, 15:00</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-caption text-caption font-medium">
+                Preparar proposta comercial
+              </span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-medium text-on-surface font-semibold">Pastelaria Sabor Real</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">description</span>
+              Envio de proposta comercial
+            </td>
+<td class="py-2.5 px-3 text-on-surface-variant">
+              Proposta recebida pelo sócio-gerente
+            </td>
+<td class="py-2.5 px-3 font-tabular-metric text-on-surface-variant">Ontem, 11:30</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-caption text-caption font-medium">
+                Follow-up telefónico
+              </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- TABLE 2: LEADS RECENTES (Dense Attio/Linear spreadsheet view) -->
+<section class="bg-surface-container-lowest rounded-lg p-4 shadow-sm">
+<!-- Toolbar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">Leads Recentes</h2>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-caption text-caption">43 no total</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5">
+<button class="h-7 px-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-compact text-caption transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">table_rows</span>
+          Vista Tabela
+        </button>
+<button class="h-7 px-2.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-compact text-caption transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">filter_alt</span>
+          Filtros (3)
+        </button>
+<button class="h-7 px-2.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-compact text-caption transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">swap_vert</span>
+          Ordenar
+        </button>
+<button class="h-7 px-2.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-compact text-caption transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">download</span>
+          Exportar CSV
+        </button>
+<a class="font-caption text-caption text-primary hover:underline ml-1 font-medium" href="#">
+          Ver todos os 43 leads →
+        </a>
+</div>
+</div>
+<!-- SpreadSheet Data Grid -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-default text-[12px] whitespace-nowrap">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-caption text-caption uppercase tracking-wider">
+<th class="py-2 px-3 w-8 rounded-l-md text-center">
+<input class="w-3.5 h-3.5 rounded accent-primary cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-2 px-3 font-semibold">Negócio</th>
+<th class="py-2 px-3 font-semibold">Contacto</th>
+<th class="py-2 px-3 font-semibold">Etapa</th>
+<th class="py-2 px-3 font-semibold">Score</th>
+<th class="py-2 px-3 font-semibold">Origem</th>
+<th class="py-2 px-3 font-semibold">Último Contacto</th>
+<th class="py-2 px-3 font-semibold rounded-r-md">Próxima Ação</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Lead 1: Doces da Ruth (Selected) -->
+<tr class="bg-primary-fixed/20 hover:bg-primary-fixed/30 transition-colors">
+<td class="py-2 px-3 text-center">
+<input checked="" class="w-3.5 h-3.5 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2 px-3">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-on-surface font-semibold">Doces da Ruth</span>
+<span class="text-on-surface-variant font-caption text-caption">(Talatona, Luanda)</span>
+</div>
+</td>
+<td class="py-2 px-3 text-on-surface">Ruth Santos <span class="text-on-surface-variant font-caption">(Gerente)</span></td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-caption text-caption font-semibold">
+                Proposta
+              </span>
+</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-fixed font-caption text-caption font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+                92 (Quente)
+              </span>
+</td>
+<td class="py-2 px-3 text-on-surface-variant">Instagram Direct</td>
+<td class="py-2 px-3 font-tabular-metric text-on-surface-variant">Há 2 horas</td>
+<td class="py-2 px-3 text-on-surface font-medium">Follow-up da proposta</td>
+</tr>
+<!-- Lead 2: Pastelaria Sabor Real -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3 text-center">
+<input class="w-3.5 h-3.5 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2 px-3">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-on-surface font-semibold">Pastelaria Sabor Real</span>
+<span class="text-on-surface-variant font-caption text-caption">(Maianga, Luanda)</span>
+</div>
+</td>
+<td class="py-2 px-3 text-on-surface">Paulo Silveira <span class="text-on-surface-variant font-caption">(Proprietário)</span></td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-caption text-caption font-semibold">
+                Contacto
+              </span>
+</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-secondary-container/50 text-on-secondary-fixed font-caption text-caption font-medium">
+                81 (Morno)
+              </span>
+</td>
+<td class="py-2 px-3 text-on-surface-variant">Prospecção Ativa</td>
+<td class="py-2 px-3 font-tabular-metric text-on-surface-variant">Hoje, 11:30</td>
+<td class="py-2 px-3 text-on-surface font-medium">Apresentar serviços</td>
+</tr>
+<!-- Lead 3: Confeitaria Jú -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3 text-center">
+<input class="w-3.5 h-3.5 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2 px-3">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-on-surface font-semibold">Confeitaria Jú</span>
+<span class="text-on-surface-variant font-caption text-caption">(Alvalade, Luanda)</span>
+</div>
+</td>
+<td class="py-2 px-3 text-on-surface">Juliana Baptista</td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-caption text-caption font-semibold">
+                Diagnóstico
+              </span>
+</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-tertiary-fixed/70 text-on-tertiary-fixed font-caption text-caption font-medium">
+                76 (Morno)
+              </span>
+</td>
+<td class="py-2 px-3 text-on-surface-variant">Indicação</td>
+<td class="py-2 px-3 font-tabular-metric text-on-surface-variant">Ontem</td>
+<td class="py-2 px-3 text-on-surface font-medium">Responder mensagem</td>
+</tr>
+<!-- Lead 4: Bolos da Nádia -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3 text-center">
+<input class="w-3.5 h-3.5 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2 px-3">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-on-surface font-semibold">Bolos da Nádia</span>
+<span class="text-on-surface-variant font-caption text-caption">(Kilamba, Luanda)</span>
+</div>
+</td>
+<td class="py-2 px-3 text-on-surface">Nádia Ferreira</td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-caption text-caption font-semibold">
+                Proposta
+              </span>
+</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-secondary-container/60 text-on-secondary-fixed font-caption text-caption font-medium">
+                88 (Morno)
+              </span>
+</td>
+<td class="py-2 px-3 text-on-surface-variant">Google Maps</td>
+<td class="py-2 px-3 font-tabular-metric text-on-surface-variant">Ontem</td>
+<td class="py-2 px-3 text-on-surface font-medium">Enviar orçamento</td>
+</tr>
+<!-- Lead 5: Doçuras da Maria -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3 text-center">
+<input class="w-3.5 h-3.5 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2 px-3">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-on-surface font-semibold">Doçuras da Maria</span>
+<span class="text-on-surface-variant font-caption text-caption">(Miramar, Luanda)</span>
+</div>
+</td>
+<td class="py-2 px-3 text-on-surface">Maria Domingos</td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-primary-fixed-dim text-on-primary-fixed-variant font-caption text-caption font-semibold">
+                Follow-up
+              </span>
+</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-tertiary-fixed-dim/40 text-on-tertiary-fixed font-caption text-caption font-medium">
+                69 (Médio)
+              </span>
+</td>
+<td class="py-2 px-3 text-on-surface-variant">WhatsApp</td>
+<td class="py-2 px-3 font-tabular-metric text-on-surface-variant">Há 2 dias</td>
+<td class="py-2 px-3 text-on-surface font-medium">Contacto de fecho</td>
+</tr>
+<!-- Lead 6: Espaço Doce -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3 text-center">
+<input class="w-3.5 h-3.5 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2 px-3">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-on-surface font-semibold">Espaço Doce</span>
+<span class="text-on-surface-variant font-caption text-caption">(Benfica, Luanda)</span>
+</div>
+</td>
+<td class="py-2 px-3 text-on-surface">Carlos Morais</td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-caption text-caption font-semibold">
+                Lead
+              </span>
+</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-tertiary-fixed-dim/30 text-on-tertiary-fixed font-caption text-caption font-medium">
+                58 (Médio)
+              </span>
+</td>
+<td class="py-2 px-3 text-on-surface-variant">Prospecção Ativa</td>
+<td class="py-2 px-3 font-tabular-metric text-on-surface-variant">Há 3 dias</td>
+<td class="py-2 px-3 text-on-surface font-medium">Qualificar contacto</td>
+</tr>
+<!-- Lead 7: Sabores da Vau -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3 text-center">
+<input class="w-3.5 h-3.5 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2 px-3">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-on-surface font-semibold">Sabores da Vau</span>
+<span class="text-on-surface-variant font-caption text-caption">(Ingombota, Luanda)</span>
+</div>
+</td>
+<td class="py-2 px-3 text-on-surface">Teresa Vau</td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-caption text-caption font-semibold">
+                Lead
+              </span>
+</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-caption text-caption font-medium">
+                44 (Frio)
+              </span>
+</td>
+<td class="py-2 px-3 text-on-surface-variant">Instagram</td>
+<td class="py-2 px-3 font-tabular-metric text-on-surface-variant">Há 4 dias</td>
+<td class="py-2 px-3 text-on-surface font-medium">Reativar conversa</td>
+</tr>
+<!-- Lead 8: Delícias da Ana -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3 text-center">
+<input class="w-3.5 h-3.5 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2 px-3">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-on-surface font-semibold">Delícias da Ana</span>
+<span class="text-on-surface-variant font-caption text-caption">(Mutamba, Luanda)</span>
+</div>
+</td>
+<td class="py-2 px-3 text-on-surface">Ana Cristina Manuel</td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-caption text-caption font-semibold">
+                Diagnóstico
+              </span>
+</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-secondary-container/50 text-on-secondary-fixed font-caption text-caption font-medium">
+                79 (Morno)
+              </span>
+</td>
+<td class="py-2 px-3 text-on-surface-variant">Indicação</td>
+<td class="py-2 px-3 font-tabular-metric text-on-surface-variant">Ontem</td>
+<td class="py-2 px-3 text-on-surface font-medium">Enviar proposta detalhada</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer with Pagination & Density Controls -->
+<div class="mt-3 pt-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-caption text-caption text-on-surface-variant">
+<div>
+        A mostrar <span class="text-on-surface font-medium">8</span> de <span class="text-on-surface font-medium">43</span> leads registados
+      </div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1">
+<span>Linhas por página:</span>
+<select class="h-6 px-1.5 bg-surface-container rounded text-on-surface font-body-default text-caption focus:outline-none cursor-pointer">
+<option>8</option>
+<option>15</option>
+<option>30</option>
+</select>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-6 h-6 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[15px]">chevron_left</span>
+</button>
+<span class="px-2 font-tabular-metric text-on-surface font-semibold">1 / 6</span>
+<button class="w-6 h-6 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[15px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div></main></div></body></html>
